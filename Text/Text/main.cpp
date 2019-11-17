@@ -1,20 +1,18 @@
 #include <iostream>
-#include "Pokemon.h"
+#include "Sumo.h"
+#include "Karateka.h"
 using namespace std;
 
 int main() {
 
-Pokemon* pokemon1;
+Sumo* sumo1 = new Sumo("白鵬");
+Karateka* karateka1 = new Karateka("大山");
 
-/* ポケモン１について*/
-pokemon1 = new Pokemon("コイキング");
-// 生まれる
-pokemon1->Birth();
-pokemon1->weapon.name = "エクスカリバー";
-// 子供ポケモンを産む
-pokemon1->Bear();
-
-delete pokemon1;
+// sumo1がkarateka1に勝利
+sumo1->WinKarateka(karateka1);
+	
+delete sumo1;
+delete karateka1;
 
 	system("pause");
 	return 0;
