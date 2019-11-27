@@ -115,16 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Karateka.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Pokemon.cpp" />
-    <ClCompile Include="Sumo.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Karateka.h" />
-    <ClInclude Include="Pokemon.h" />
-    <ClInclude Include="Sumo.h" />
-    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
