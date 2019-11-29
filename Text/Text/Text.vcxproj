@@ -115,15 +115,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GameMachine.cpp" />
+    <ClCompile Include="Boss.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="PS4.cpp" />
-    <ClCompile Include="Switch.cpp" />
+    <ClCompile Include="Monster.cpp" />
+    <ClCompile Include="Slime.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameMachine.h" />
-    <ClInclude Include="PS4.h" />
-    <ClInclude Include="Switch.h" />
+    <ClInclude Include="Boss.h" />
+    <ClInclude Include="Monster.h" />
+    <ClInclude Include="Slime.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,25 +1,32 @@
+#include "Slime.h"
+#include "Boss.h"
 #include <iostream>
-#include "PS4.h"
-#include "Switch.h"
 using namespace std;
 
 int main() {
 
-	PS4* p_ps4 = new PS4;
-	Switch* p_switch = new Switch;
-GameMachine* p_gameMachine = new GameMachine;
+Monster* monsters[5];
 
-p_ps4->PowerOn();
-p_ps4->PlayPSVR();
+// 生成フェーズ
+for (int i = 0; i < 5; i++)
+{
+	if (i < 2)
+		monsters[i] = new Slime;
+	else
+		monsters[i] = new Boss;
+}
 
-p_switch->PowerOn();
-p_switch->PlayPortable();
+// 攻撃フェーズ
+for (int i = 0; i < 5; i++)
+{
+	monsters[i]->Attack();
+}
 
-p_gameMachine->PowerOn();
-
-delete p_ps4;
-delete p_switch;
-delete p_gameMachine;
+// 破棄フェーズ
+for (int i = 0; i < 5; i++)
+{
+	delete monsters[i];
+}
 
 	system("pause");
 	return 0;
