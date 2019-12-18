@@ -1,32 +1,27 @@
-#include "Slime.h"
-#include "Boss.h"
 #include <iostream>
+#include "Human.h"
 using namespace std;
 
 int main() {
 
-	Monster* monsters[2];
-
-	// 生成フェーズ
-	for (int i = 0; i < 2; i++)
+	// ローカル変数のスコープ
 	{
-		if (i < 1)
-			monsters[i] = new Slime;
-		else
-			monsters[i] = new Boss;
+		Human human1("ドラえもん");
+		Human human2("のび太");
+
+		human1.MakeHenchman();
+
+		human2 = human1;
 	}
 
-	// 攻撃フェーズ
-	for (int i = 0; i < 2; i++)
-	{
-		monsters[i]->Attack();
-	}
+	//Human* human1 = new Human("ドラえもん");
+	//Human* human2 = new Human(*human1);
 
-	// 破棄フェーズ
-	for (int i = 0; i < 2; i++)
-	{
-		delete monsters[i];
-	}
+	//human1->Introduce();
+	//human2->Introduce();
+
+	//delete human1;
+	//delete human2;
 
 	system("pause");
 	return 0;
