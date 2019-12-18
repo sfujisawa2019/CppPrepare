@@ -11,6 +11,6 @@ public: /* メンバ関数 */
 	// デストラクタ（宣言）
 	~Slime();
 	// 攻撃（宣言）
-	void Attack();
+	void Attack() override;
 private: /* メンバ変数 */
 };

@@ -9,9 +9,9 @@ public: /* メンバ関数 */
 	// コンストラクタ（宣言）
 	Monster();
 	// デストラクタ（宣言）
-	~Monster();
+	virtual ~Monster();
 	// 攻撃（宣言）
-	void Attack();
+	virtual void Attack();
 protected: /* メンバ変数 */
 	// 名前
 	string name;

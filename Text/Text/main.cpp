@@ -5,28 +5,28 @@ using namespace std;
 
 int main() {
 
-Monster* monsters[5];
+	Monster* monsters[2];
 
-// 生成フェーズ
-for (int i = 0; i < 5; i++)
-{
-	if (i < 2)
-		monsters[i] = new Slime;
-	else
-		monsters[i] = new Boss;
-}
+	// 生成フェーズ
+	for (int i = 0; i < 2; i++)
+	{
+		if (i < 1)
+			monsters[i] = new Slime;
+		else
+			monsters[i] = new Boss;
+	}
 
-// 攻撃フェーズ
-for (int i = 0; i < 5; i++)
-{
-	monsters[i]->Attack();
-}
+	// 攻撃フェーズ
+	for (int i = 0; i < 2; i++)
+	{
+		monsters[i]->Attack();
+	}
 
-// 破棄フェーズ
-for (int i = 0; i < 5; i++)
-{
-	delete monsters[i];
-}
+	// 破棄フェーズ
+	for (int i = 0; i < 2; i++)
+	{
+		delete monsters[i];
+	}
 
 	system("pause");
 	return 0;
